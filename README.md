@@ -1,4 +1,4 @@
-# ![Logo](/images/terraform.png)erraform-modules
+# ![Logo](/images/terraform.png)erraform-modules by <img src="/images/peak.gif" alt="Peak" width="100" height="100" />
 
 ![Build](https://github.com/peak-ai/terraform-modules/workflows/Build/badge.svg) ![stable](https://img.shields.io/github/v/release/peak-ai/terraform-modules) ![](https://img.shields.io/github/v/release/peak-ai/terraform-modules?include_prereleases) ![](https://img.shields.io/github/license/peak-ai/terraform-modules) ![](https://img.shields.io/github/languages/count/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-raw/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-pr-raw/peak-ai/terraform-modules)
 
