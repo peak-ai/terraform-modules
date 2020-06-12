@@ -1,4 +1,4 @@
-<img src="images/peak.gif" width="100" height="100" /> 
+<img src=".github/images/peak.gif" width="100" height="100" />
 
 # Contributing to Peak's Terraform Modules
 
