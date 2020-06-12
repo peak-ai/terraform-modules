@@ -7,6 +7,7 @@ _Description of what this PR does. What have you added or changed, and why?_
 
 - [ ] Bug Fix
 - [ ] Enhancement (new features, refinement)
+- [ ] Breaking Change
 - [ ] Refactor
 - [ ] Documentation
 
