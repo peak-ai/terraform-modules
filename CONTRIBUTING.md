@@ -1,3 +1,5 @@
+<img src="images/peak.gif" width="100" height="100" /> 
+
 # Contributing to Peak's Terraform Modules
 
 Despite being primarily maintained by Peak, we welcome pull requests to this repo! We thank you for your time and efforts in making this library better 🙌🏻
