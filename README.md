@@ -1,4 +1,6 @@
-# ![Logo](/image/logo.png)erraform-modules
+# ![Logo](/images/terraform.png)erraform-modules
+
+![Build](https://github.com/peak-ai/terraform-modules/workflows/Build/badge.svg) ![languages]
 
 This repo list some open to use Terraform modules we use at `Peak AI` because we :heart: IAC(Infrastucture as Code) and Terraform modules are a great way to write reusable Infra.
 
