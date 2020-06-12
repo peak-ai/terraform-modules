@@ -7,7 +7,9 @@ Despite being primarily maintained by Peak, we welcome pull requests to this rep
 * introduces breaking changes
 * changes a major version of a key dependency
 
-## Things to consider
+## Process/Things to consider
+
+* `Fork` this repo, make a branch with your changes and then make a PR to `Peak`
 
 * Follow best pacticies for Terraform modules like
     - Folder Structure ( distribute code in `variables.tf`, `main.tf` and `outputs.tf`)
