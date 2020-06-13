@@ -62,6 +62,3 @@ module "tags" {
 ## Contributing
 
 Despite being primarily maintained by Peak, we welcome and appreciate any contributions from the community! Please see the [contribution guidelines](CONTRIBUTING.md) for more info.
-
-## License
-BSD-3-Clause
