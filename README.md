@@ -25,7 +25,15 @@ module "<name_you_want_to_give_to_this_module>" {
     # Add inputs here you want to overwrite
 }
 ```
-
+`Example`
+```hcl
+module "tags" {
+    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    stage   = "latest"
+    feature = "example"
+    service = "example"
+}
+```
 
 ### Importing latest version (Use this approach at your own risk as there can be breaking changes)
 
@@ -43,7 +51,7 @@ module "<name_you_want_to_give_to_this_module>" {
 `Example`
 ```hcl
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git@github.com:peak-ai/terraform-modules.git//tags"
     stage   = "latest"
     feature = "example"
     service = "example"
