@@ -1,19 +1,19 @@
 output "default" {
-    value = local.tags
+  value = local.tags
 }
 
 output "stage" {
-    value = var.stage
+  value = var.stage
 }
 
 output "tenant" {
-    value = var.tenant
+  value = var.tenant
 }
 
 output "feature" {
-    value = var.feature
+  value = var.feature
 }
 
 output "service" {
-    value = var.service
+  value = var.service
 }

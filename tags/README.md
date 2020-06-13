@@ -2,7 +2,7 @@
 
 `Tags` for AWS Resources or `Labels` for Kubernetes objects allows Users to add metadta to Resource/Objects. Each tag is simple key-value pair which makes it easier to manage, search for, and filter resources.
 
-This modules defines base `tags` we here at Peak assign to each of our resources and are just a base Idea. You might might change that as per your organisation's needs. In that  case feel free to fork this repo and define base tags fits your organisation needs.
+This module defines base `tags` we here at Peak assign to each of our resources and are just a base Idea. You might want change that as per your organisation's needs. In that  case feel free to fork this repo and define base tags that fits your organisation needs.
 
 
 ## Gist
@@ -50,11 +50,10 @@ resource "aws_s3_bucket" "example" {
 ### Example 2 > Minimal using specific version
 
 ```hcl
-# Importing module
 module "tags" {
     source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
     tenant  = "new-client"
-    stage = "latest"
+    stage   = "latest"
     feature = "example"
     service = "example"
 }
@@ -66,5 +65,30 @@ provider "aws" {
 resource "aws_s3_bucket" "example" {
   bucket = "example"
   tags   = module.tags.default
+}
+```
+
+### Example 3 > Adding tags ( aka labels) to K8S objects
+
+You can assign tags to any kubernetes object as well
+
+```hcl
+module "tags" {
+    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    tenant  = "new-client"
+    stage   = "latest"
+    feature = "example"
+    service = "example"
+}
+
+provider "kubernetes" {
+    version = "~> 1.11"
+}
+
+resource "kubernetes_namespace" "example" {
+    metadata {
+        labels = module.tags.default
+        name = "example"
+    }
 }
 ```

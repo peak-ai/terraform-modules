@@ -19,6 +19,7 @@ Despite being primarily maintained by Peak, we welcome pull requests to this rep
     - Do not hardcode values and keep them configurable
     - Mention minimum required provider version
     - Provide default values when possible
+    - Make sure code all actions pass. Beast to run `terraform fmt -recursive` before commiting
     - Update List in base [README](README.md) when adding or removing a module
 
 ## Raising a pull request
