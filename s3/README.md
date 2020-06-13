@@ -24,7 +24,7 @@ provider "aws" {
 
 module "my_s3" {
   source  = "git@github.com:peak-ai/terraform-modules.git//s3?ref=v0.2.0"
-  name = "s3"
-  tags = module.tags.default
+  name    = "s3"
+  tags    = module.tags.default
 }
 ```

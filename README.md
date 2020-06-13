@@ -9,7 +9,7 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 ## List of avilable modules
 
 - [:bookmark: tags (aka labels)](/tags)
-- [:open_file_folder: ](/s3)
+- [:open_file_folder: s3](/s3)
 
 ## Example usage
 
