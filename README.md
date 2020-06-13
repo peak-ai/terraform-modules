@@ -2,7 +2,7 @@
 
 # ![T](.github/images/terraform.png)erraform-modules
 
-![Build](https://github.com/peak-ai/terraform-modules/workflows/Build/badge.svg) ![stable](https://img.shields.io/github/v/release/peak-ai/terraform-modules) ![](https://img.shields.io/github/v/release/peak-ai/terraform-modules?include_prereleases) ![](https://img.shields.io/github/license/peak-ai/terraform-modules) ![](https://img.shields.io/github/languages/count/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-raw/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-pr-raw/peak-ai/terraform-modules)
+![Build](https://github.com/peak-ai/terraform-modules/workflows/Build/badge.svg) ![stable](https://img.shields.io/github/v/release/peak-ai/terraform-modules) ![](https://img.shields.io/github/v/release/peak-ai/terraform-modules?include_prereleases) ![](https://img.shields.io/github/license/peak-ai/terraform-modules) ![](https://img.shields.io/github/languages/count/peak-ai/terraform-modules) ![](https://img.shields.io/github/languages/top/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-raw/peak-ai/terraform-modules) ![](https://img.shields.io/github/issues-pr-raw/peak-ai/terraform-modules)
 
 This repo list some open to use Terraform modules we use at `Peak AI` because we :heart: IAC(Infrastucture as Code) and Terraform modules are a great way to write reusable Infra.
 
