@@ -8,7 +8,8 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 
 ## List of avilable modules
 
-- [tags (aka labels)](/tags)
+- [:bookmark: tags (aka labels)](/tags)
+- [:open_file_folder: ](/s3)
 
 ## Example usage
 
@@ -18,7 +19,7 @@ There are two approaches to import and use modules in this repo.
 `Blueprint`
 ```hcl
 module "<name_you_want_to_give_to_this_module>" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>"
+    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>?ref=<github_tag/release/commit>"
     .
     .
     .
@@ -40,7 +41,7 @@ module "tags" {
 `Blueprint`
 ```hcl
 module "<name_you_want_to_give_to_this_module>" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>?ref=<github_tag/release/commit>"
+    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>"
     .
     .
     .

@@ -1,4 +1,4 @@
-# Tags
+# :bookmark: Tags
 
 `Tags` for AWS Resources or `Labels` for Kubernetes objects allows Users to add metadta to Resource/Objects. Each tag is simple key-value pair which makes it easier to manage, search for, and filter resources.
 
