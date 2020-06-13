@@ -8,7 +8,7 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 
 ## List of avilable modules
 
-TODO
+- [tags (aka labels)](/tags)
 
 ## Example usage
 

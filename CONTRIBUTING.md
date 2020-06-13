@@ -2,7 +2,7 @@
 
 # Contributing to Peak's Terraform Modules
 
-Despite being primarily maintained by Peak, we welcome pull requests to this repo! We thank you for your time and efforts in making this library better 🙌🏻
+Despite being primarily maintained by Peak, we welcome pull requests to this repo! We thank you for your time and efforts in making these modules better 🙌🏻
 
 ## Consider raising an issue first if your proposed PR:
 
@@ -15,6 +15,7 @@ Despite being primarily maintained by Peak, we welcome pull requests to this rep
 
 * Follow best pacticies for Terraform modules like
     - Folder Structure ( distribute code in `variables.tf`, `main.tf` and `outputs.tf`)
+    - Name each resource as `default` for consistency of this repo (this makes outputs consistent).
     - Do not hardcode values and keep them configurable
     - Mention minimum required provider version
     - Provide default values when possible
