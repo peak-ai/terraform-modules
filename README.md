@@ -12,7 +12,7 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 - AWS
     - [:open_file_folder: S3](/s3)
     - [:camera: ECR](/ecr)
-- Miscleneous
+- Misclleneous
     - [:bookmark: Tags (aka Labels)](/tags)
 
 ## Example usage
