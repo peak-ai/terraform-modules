@@ -23,7 +23,7 @@ There are two approaches to import and use modules in this repo.
 `Blueprint`
 ```hcl
 module "<name_you_want_to_give_to_this_module>" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>?ref=<github_tag/release/commit>"
+    source  = "git::https://github.com/peak-ai/terraform-modules//<name_of_folder/module_to_use>?ref=<github_tag/release/commit>"
     .
     .
     .
@@ -33,7 +33,7 @@ module "<name_you_want_to_give_to_this_module>" {
 `Example`
 ```hcl
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git::https://github.com/peak-ai/terraform-modules//tags?ref=v0.1.0"
     stage   = "latest"
     feature = "example"
     service = "example"
@@ -45,7 +45,7 @@ module "tags" {
 `Blueprint`
 ```hcl
 module "<name_you_want_to_give_to_this_module>" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//<name_of_folder/module_to_use>"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//<name_of_folder/module_to_use>"
     .
     .
     .
@@ -56,7 +56,7 @@ module "<name_you_want_to_give_to_this_module>" {
 `Example`
 ```hcl
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags"
     stage   = "latest"
     feature = "example"
     service = "example"

@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.2.0"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.2.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
@@ -23,7 +23,7 @@ module "tags" {
 }
 
 module "my_s3" {
-  source  = "git@github.com:peak-ai/terraform-modules.git//s3?ref=v0.2.0"
+  source  = "git::https://github.com/peak-ai/terraform-modules.git//s3?ref=v0.2.0"
   name    = "s3"
   tags    = module.tags.default
 }

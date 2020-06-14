@@ -15,7 +15,7 @@ provider "aws" {
     version = "~> 2.62"
 }
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.3.0"
+    source  = git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.3.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
@@ -23,7 +23,7 @@ module "tags" {
 }
 
 module "my_ecr" {
-  source  = "git@github.com:peak-ai/terraform-modules.git//ecr?ref=v0.3.0"
+  source  = "git::https://github.com/peak-ai/terraform-modules.git//ecr?ref=v0.3.0"
   name    = "my_ecr"
   tags    = module.tags.default
 }

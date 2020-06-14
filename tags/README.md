@@ -26,7 +26,7 @@ Once initialised tags added to as many resources as you want.
 ```hcl
 # Importing module
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags"
     # Passing values from here will overide the default values
     tenant  = "new-client"
     # It is good practice to make workspaces matching four staging environment rather than hardcoing them
@@ -51,7 +51,7 @@ resource "aws_s3_bucket" "example" {
 
 ```hcl
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.1.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
@@ -74,7 +74,7 @@ You can assign tags to any kubernetes object as well
 
 ```hcl
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.1.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
