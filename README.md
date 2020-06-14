@@ -8,8 +8,12 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 
 ## List of avilable modules
 
-- [:bookmark: tags (aka labels)](/tags)
-- [:open_file_folder: s3](/s3)
+
+- AWS
+    - [:open_file_folder: S3](/s3)
+    - [:camera: ECR](/ecr)
+- Miscleneous
+    - [:bookmark: Tags (aka Labels)](/tags)
 
 ## Example usage
 

@@ -10,16 +10,16 @@ This module definines minimal, secure S3 bucket configuration.
 ## Example usage
 
 ```hcl
+provider "aws" {
+    version = "~> 2.62"
+}
+
 module "tags" {
-    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git@github.com:peak-ai/terraform-modules.git//tags?ref=v0.2.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
     service = "example"
-}
-
-provider "aws" {
-    version = "~> 2.62"
 }
 
 module "my_s3" {
