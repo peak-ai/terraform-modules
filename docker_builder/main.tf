@@ -29,7 +29,11 @@ resource "null_resource" "build_image" {
 
   provisioner "local-exec" {
     command = <<EOT
-      eval $(aws ecr get-login --no-include-email);
+      aws ecr get-login-password \
+        --region ${var.region} \
+        | docker login \
+        --username AWS \
+        --password-stdin ${aws_ecr_repository.image_repo.repository_url};
 
       docker pull ${local.registry}:${local.git_branch} || true;
       docker build \
