@@ -20,7 +20,7 @@ locals {
   git_branch = lower(replace(module.git_branch.stdout, "/", "-"))
   git_sha    = module.git_sha.stdout
 
-  tag = "${var.repository_url}:${local.git_branch}"
+  tag        = "${var.repository_url}:${local.git_branch}"
   extra_tags = local.git_branch == "master" ? ["${var.repository_url}:${local.git_sha}", "${var.repository_url}:latest"] : ["${var.repository_url}:${local.git_sha}"]
 }
 
@@ -45,10 +45,10 @@ resource "null_resource" "build_image" {
         ${local.args} ${var.dockerfile};
       docker push ${local.tag};
 
-      %{ for tag in local.extra_tags }
+      %{for tag in local.extra_tags}
         docker tag ${local.tag} ${tag}
         docker push ${tag}
-      %{ endfor }
+      %{endfor}
     EOT
   }
 }
