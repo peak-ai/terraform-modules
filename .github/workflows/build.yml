@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: hashicorp/setup-terraform@v1
-      - name: Ckecing formating of all files
+      - name: Checking formating of all files
         run: |
           terraform fmt -check -diff -recursive
 
