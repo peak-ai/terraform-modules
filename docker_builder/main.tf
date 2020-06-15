@@ -1,25 +1,25 @@
 terraform {
   required_providers {
     null = "~> 2.1"
-    aws = ">= 2.62"
+    aws  = ">= 2.62"
   }
 }
 
 module "git_branch" {
-  source = "matti/resource/shell"
+  source  = "matti/resource/shell"
   command = "git rev-parse --abbrev-ref HEAD"
 }
 
 module "git_sha" {
-  source = "matti/resource/shell"
+  source  = "matti/resource/shell"
   command = "git rev-parse HEAD"
 }
 
 locals {
-  registry = "${var.repository}/${var.service}"
-  args = join(" ", var.args)
+  registry   = "${var.repository}/${var.service}"
+  args       = join(" ", var.args)
   git_branch = lower(replace(module.git_branch.stdout, "/", "-"))
-  git_sha = module.git_sha.stdout
+  git_sha    = module.git_sha.stdout
 }
 
 resource "null_resource" "build_image" {
