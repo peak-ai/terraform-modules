@@ -27,8 +27,7 @@ locals {
 module "my_docker_builder" {
   source     = "git::https://github.com/peak-ai/terraform-modules.git//docker_builder?ref=v0.4.0"
   # Here we use the repo which has been created in the basic example. (If you were doing this, you wouldnt hard code these values)
-  repository = "<account_id>.dkr.ecr.<region>.amazonaws.com"
-  service    = "latest-my-example"
+  repository_url = "<account_id>.dkr.ecr.<region>.amazonaws.com/latest-my-example"
   dockerfile = "./Dockerfile"
   args       = ["--build-arg NPM_TOKEN=${local.npm_token}"]
 }
