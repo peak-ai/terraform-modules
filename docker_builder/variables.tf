@@ -1,11 +1,11 @@
-variable "repository" {
+variable "repository_url" {
   type        = string
   description = "URL of the ECR repository"
 }
 
-variable "service" {
+variable "region" {
   type        = string
-  description = "Name of the service"
+  description = "The AWS region to use"
 }
 
 variable "dockerfile" {

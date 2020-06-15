@@ -1,4 +1,4 @@
-# :construction: Docker Builder
+# :construction: Builds Docker Image as Part of Infra and pushes to ECR
 
 ## Gist
 
