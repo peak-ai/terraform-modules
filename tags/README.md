@@ -74,7 +74,7 @@ You can assign tags to any kubernetes object as well
 
 ```hcl
 module "tags" {
-    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.1.0"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.5.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
