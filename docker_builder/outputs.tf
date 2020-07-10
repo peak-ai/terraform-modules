@@ -1,5 +1,5 @@
 output "image" {
-  value       = "${var.repository_url}:${module.git_sha.stdout}"
+  value       = "${var.repository_url}:${var.git_sha}"
   description = "The full path to the docker image"
 }
 
