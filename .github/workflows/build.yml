@@ -11,5 +11,5 @@ jobs:
       - uses: hashicorp/setup-terraform@v1
       - name: Ckecing formating of all files
         run: |
-          terraform fmt -check -diff -recursive
+          echo hello
 
