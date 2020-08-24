@@ -1,8 +1,3 @@
-terraform {
-  # This is enabled to use validation in variable
-  experiments = [variable_validation]
-}
-
 variable "stage" {
   description = "Stage on which infra should be deployed"
   type        = string
