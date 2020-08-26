@@ -27,7 +27,7 @@ This module defines ECR repo with tags and life cycle policy which removes N unt
 | image\_tag\_mutability | n/a | `string` | `"MUTABLE"` | no |
 | name | Name of ECR bucket | `string` | n/a | yes |
 | scan\_on\_push | n/a | `bool` | `true` | no |
-| tags | Tags to pass | `any` | n/a | yes |
+| tags | Tags to pass | `object` | n/a | yes |
 | untagged\_images\_to\_keep | n/a | `number` | `5` | no |
 
 ## Outputs

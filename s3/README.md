@@ -30,7 +30,7 @@ This module definines minimal, secure S3 bucket configuration.
 | ignore\_public\_acls | n/a | `bool` | `true` | no |
 | name | Name of S3 bucket | `string` | n/a | yes |
 | restrict\_public\_buckets | n/a | `bool` | `true` | no |
-| tags | Tags to pass | `any` | n/a | yes |
+| tags | Tags to pass | `object` | n/a | yes |
 
 ## Outputs
 
