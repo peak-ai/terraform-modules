@@ -2,6 +2,10 @@ output "default" {
   value = local.tags
 }
 
+output "string" {
+  value = local.strigifiedTags
+}
+
 output "stage" {
   value = var.stage
 }
