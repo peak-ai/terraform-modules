@@ -35,7 +35,7 @@ module "k8s_irsa" {
   source          = "git::https://github.com/peak-ai/terraform-modules.git//k8s_irsa?ref=v0.5.3"
   cluster         = "my_cluster"
   namespace       = kubernetes_namespace.example.id
-  service_account = "my_ns"
+  service_account = "main"
   tags            = module.tags.default
   role_name       = "my_role"
   policy_name     = "my_policy"
