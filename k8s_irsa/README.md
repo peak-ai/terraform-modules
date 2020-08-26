@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 module "tags" {
-    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.5.3"
+    source  = "git::https://github.com/peak-ai/terraform-modules.git//tags?ref=v0.6.0"
     tenant  = "new-client"
     stage   = "latest"
     feature = "example"
@@ -32,7 +32,7 @@ resource "kubernetes_namespace" "example" {
 
 module "k8s_irsa" {
   depends_on      = [kubernetes_namespace.example]
-  source          = "git::https://github.com/peak-ai/terraform-modules.git//k8s_irsa?ref=v0.5.3"
+  source          = "git::https://github.com/peak-ai/terraform-modules.git//k8s_irsa?ref=v0.6.0"
   cluster         = "my_cluster"
   namespace       = kubernetes_namespace.example.id
   service_account = "main"
