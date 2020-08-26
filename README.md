@@ -9,7 +9,7 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 ## List of avilable modules
 
 
-- [:open_file_folder: S3 ![](https://github.com/burib/aws-simple-icons-for-architecture-diagrams/blob/master/General/General_AWScloud.png)](/s3)
+- [:open_file_folder: S3](/s3)
 - [:camera: ECR](/ecr)
 - [:construction: Docker Builder](/docker_builder)
 - [:bookmark: Tags (aka Labels)](/tags)
