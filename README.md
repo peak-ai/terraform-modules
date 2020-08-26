@@ -8,13 +8,11 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 
 ## List of avilable modules
 
-
-- AWS
-    - [:open_file_folder: S3](/s3)
-    - [:camera: ECR](/ecr)
-    - [:construction: Docker Builder](/docker_builder)
-- Miscellaneous
-    - [:bookmark: Tags (aka Labels)](/tags)
+- [:construction: Docker Builder](/docker_builder)
+- [:camera: ECR](/ecr)
+- [☸ K8S_IRSA](/k8s_irsa)
+- [:open_file_folder: S3](/s3)
+- [:bookmark: Tags (aka Labels)](/tags)
 
 ## Example usage
 

@@ -34,5 +34,6 @@ variable "restrict_public_buckets" {
 }
 
 variable "tags" {
+  type        = object
   description = "Tags to pass"
 }

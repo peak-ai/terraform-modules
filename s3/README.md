@@ -7,6 +7,38 @@ For more information about `S3` check [AWS Docs](https://aws.amazon.com/s3/)
 ## Gist
 This module definines minimal, secure S3 bucket configuration.
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.62 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.62 |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| acl | n/a | `string` | `"bucket-owner-full-control"` | no |
+| block\_public\_acls | n/a | `bool` | `true` | no |
+| block\_public\_policy | n/a | `bool` | `true` | no |
+| enable\_versioning | n/a | `bool` | `false` | no |
+| ignore\_public\_acls | n/a | `bool` | `true` | no |
+| name | Name of S3 bucket | `string` | n/a | yes |
+| restrict\_public\_buckets | n/a | `bool` | `true` | no |
+| tags | Tags to pass | `object` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| arn | The ARN of the bucket. Will be of format arn:aws:s3:::bucketname |
+| id | The name of the bucket |
+
 ## Example usage
 
 ```hcl

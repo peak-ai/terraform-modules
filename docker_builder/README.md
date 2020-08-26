@@ -9,6 +9,37 @@ This is good because it allows us to make use of environment variables and other
 infrastructure deployment. You'll be able to provision infrastructure, build a docker image and deploy the docker image in one command
 rather than a series of commands, which is what you'd traditionally have to do in CodePipeline or CodeBuild.
 
+## Requirements
+
+| Name | Version |
+|------|---------|
+| aws | >= 2.62 |
+| null | ~> 2.1 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| null | ~> 2.1 |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| args | A key value list of additional arguments to be passed into the docker build | `list(string)` | `[]` | no |
+| git\_branch | The git branch | `string` | n/a | yes |
+| git\_sha | The SHA of the git commit | `string` | n/a | yes |
+| path | Path where the dockerfile exists | `string` | n/a | yes |
+| region | The AWS region to use | `string` | n/a | yes |
+| repository\_url | URL of the ECR repository | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| image | The full path to the docker image |
+| tags | The image tags that have been built |
+
 ## Example usage
 
 ```hcl

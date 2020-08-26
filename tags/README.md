@@ -17,6 +17,30 @@ All tags and their values are converted to lower case to avoid confusions and du
 
 `service`: Service this resource belogs to say `shopiing-cart-database`
 
+## Requirements
+
+No requirements.
+
+## Providers
+
+No provider.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| feature | n/a | `string` | n/a | yes |
+| service | n/a | `string` | n/a | yes |
+| stage | Stage on which infra should be deployed | `string` | n/a | yes |
+| tenant | n/a | `string` | `"platform"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| default | Tags object |
+| string | Tags as string |
+
 ## Example usage
 
 Once initialised tags added to as many resources as you want.

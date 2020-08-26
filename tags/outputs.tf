@@ -1,19 +1,9 @@
 output "default" {
-  value = local.tags
+  description = "Tags object"
+  value       = local.tags
 }
 
-output "stage" {
-  value = var.stage
-}
-
-output "tenant" {
-  value = var.tenant
-}
-
-output "feature" {
-  value = var.feature
-}
-
-output "service" {
-  value = var.service
+output "string" {
+  description = "Tags as string"
+  value       = local.strigifiedTags
 }
