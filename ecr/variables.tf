@@ -19,6 +19,6 @@ variable "untagged_images_to_keep" {
 }
 
 variable "tags" {
-  type        = object
+  type        = map
   description = "Tags to pass"
 }
