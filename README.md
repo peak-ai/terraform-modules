@@ -12,6 +12,7 @@ This repo list some open to use Terraform modules we use at `Peak AI` because we
 - [:camera: ECR](/ecr)
 - [☸ K8S_IRSA](/k8s_irsa)
 - [:open_file_folder: S3](/s3)
+- [:oil_drum: Dax](/dax)
 - [:bookmark: Tags (aka Labels)](/tags)
 
 ## Example usage
