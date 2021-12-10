@@ -1,12 +1,3 @@
-variable "stage" {
-  type = string
-
-  validation {
-    condition     = can(regex("^(latest|test|beta|prod)$", var.stage))
-    error_message = "Must be latest, test, beta or prod."
-  }
-}
-
 variable "tags" {}
 
 variable "region" {

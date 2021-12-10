@@ -7,7 +7,7 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 resource "aws_iam_role" "role" {
-  name = "${var.stage}-${var.name}-dax"
+  name = "${var.name}-dax"
 
   assume_role_policy = <<EOF
 {
@@ -60,8 +60,8 @@ data "aws_iam_policy_document" "document" {
 }
 
 resource "aws_iam_policy" "policy" {
-  name        = "${var.stage}-${var.name}-dax"
-  description = "Dax access policy for cluster ${var.stage}-${var.name}"
+  name        = "${var.name}-dax"
+  description = "Dax access policy for cluster ${var.name}"
 
   policy = data.aws_iam_policy_document.document.json
 }
@@ -72,7 +72,7 @@ resource "aws_iam_role_policy_attachment" "policy_attachment" {
 }
 
 resource "aws_dax_parameter_group" "group" {
-  name = "${var.stage}-${var.name}"
+  name = "${var.name}"
 
   parameters {
     name  = "query-ttl-millis"
@@ -85,12 +85,12 @@ resource "aws_dax_parameter_group" "group" {
   }
 }
 resource "aws_dax_subnet_group" "subnet_group" {
-  name       = "${var.stage}-${var.name}"
+  name       = "${var.name}"
   subnet_ids = data.aws_subnet_ids.vpc_subnets.ids
 }
 
 resource "aws_dax_cluster" "cluster" {
-  cluster_name         = "${var.stage}-${var.name}"
+  cluster_name         = "${var.name}"
   iam_role_arn         = aws_iam_role.role.arn
   node_type            = var.node_type
   replication_factor   = var.replication_factor
