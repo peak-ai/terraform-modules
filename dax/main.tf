@@ -72,7 +72,7 @@ resource "aws_iam_role_policy_attachment" "policy_attachment" {
 }
 
 resource "aws_dax_parameter_group" "group" {
-  name = "${var.name}"
+  name = var.name
 
   parameters {
     name  = "query-ttl-millis"
@@ -85,12 +85,12 @@ resource "aws_dax_parameter_group" "group" {
   }
 }
 resource "aws_dax_subnet_group" "subnet_group" {
-  name       = "${var.name}"
+  name       = var.name
   subnet_ids = data.aws_subnet_ids.vpc_subnets.ids
 }
 
 resource "aws_dax_cluster" "cluster" {
-  cluster_name         = "${var.name}"
+  cluster_name         = var.name
   iam_role_arn         = aws_iam_role.role.arn
   node_type            = var.node_type
   replication_factor   = var.replication_factor

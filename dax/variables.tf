@@ -9,13 +9,15 @@ variable "name" {
 }
 
 variable "node_type" {
-  type    = string
-  default = "dax.t2.small"
+  type        = string
+  default     = "dax.t2.small"
+  description = "(Required) The compute and memory capacity of the nodes"
 }
 
 variable "replication_factor" {
-  type    = number
-  default = 3
+  type        = number
+  default     = 3
+  description = "(Required) The number of nodes in the DAX cluster"
 }
 
 variable "vpc_id" {
@@ -23,7 +25,8 @@ variable "vpc_id" {
 }
 
 variable "tables" {
-  type = list(string)
+  type        = list(string)
+  description = "List of tables for using dax"
 }
 
 variable "item_cache_ttl_milli_second" {
