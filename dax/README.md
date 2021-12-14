@@ -44,8 +44,18 @@ module "tags" {
 }
 
 module "my_dax" {
-  source  = "git::https://github.com/peak-ai/terraform-modules.git//dax?ref=v0.7.0"
-  name    = "dax"
-  tags    = module.tags.default
+  source                        = "git::https://github.com/peak-ai/terraform-modules.git//dax?ref=v0.7.0"
+  name                          = "dax"
+  tags                          = module.tags.default
+  region                        = "example_region"
+  vpc_id                        = "example_vpc_id"
+  node_type                     = "dax.t2.small"
+  replication_factor            = 3
+  query_cache_ttl__milli_second = 30 * 1000
+  item_cache_ttl_milli_second   = 30 * 60 * 1000
+  tables = [
+    "table1",
+    "table2"
+  ]
 }
 ```
