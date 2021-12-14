@@ -6,7 +6,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | >= 2.62 |
 
 ## Inputs
 
