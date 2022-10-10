@@ -40,3 +40,8 @@ variable "query_cache_ttl__milli_second" {
   default     = 300000
   description = "Time after which query cache will invalidate. Default 5 minutes"
 }
+
+variable "security_group_ids" {
+  type        = list(string)
+  description = "(Required) One or more VPC security groups associated with the cluster"
+}

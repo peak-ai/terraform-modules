@@ -18,6 +18,7 @@ No requirements.
 | query\_cache\_ttl\_\_milli\_second | Time after which item query will invalidate. Default 5 minutes | `number` | `300000` | no |
 | region | n/a | `string` | n/a | yes |
 | replication\_factor | (Required) The number of nodes in the DAX cluster | `number` | `3` | no |
+| security_group_ids | The list of Security Group IDs to be associated with the DAX cluster | `list(string)` | n/a | yes |
 | tables | List of tables for using dax | `list(string)` | n/a | yes |
 | tags | A map of tags to assign to the resource | `any` | n/a | yes |
 | vpc\_id | n/a | `string` | n/a | yes |
@@ -53,6 +54,10 @@ module "my_dax" {
   replication_factor            = 3
   query_cache_ttl__milli_second = 30 * 1000
   item_cache_ttl_milli_second   = 30 * 60 * 1000
+  security_group_ids = [
+    "sg-123456789",
+    "sg-987654321"
+  ]
   tables = [
     "table1",
     "table2"
