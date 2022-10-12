@@ -44,16 +44,16 @@ data "aws_iam_policy_document" "document" {
   statement {
     effect = "Allow"
     actions = [
-      "dynamodb:DescribeTable",
-      "dynamodb:PutItem",
-      "dynamodb:GetItem",
-      "dynamodb:UpdateItem",
-      "dynamodb:DeleteItem",
-      "dynamodb:Query",
-      "dynamodb:Scan",
       "dynamodb:BatchGetItem",
       "dynamodb:BatchWriteItem",
-      "dynamodb:ConditionCheckItem"
+      "dynamodb:ConditionCheckItem",
+      "dynamodb:DeleteItem",
+      "dynamodb:DescribeTable",
+      "dynamodb:GetItem",
+      "dynamodb:PutItem",
+      "dynamodb:Query",
+      "dynamodb:Scan",
+      "dynamodb:UpdateItem"
     ]
     resources = flatten(local.table_arns)
   }
@@ -95,6 +95,7 @@ resource "aws_dax_cluster" "cluster" {
   node_type            = var.node_type
   replication_factor   = var.replication_factor
   parameter_group_name = aws_dax_parameter_group.group.name
+  security_group_ids   = var.security_group_ids
   subnet_group_name    = aws_dax_subnet_group.subnet_group.id
   server_side_encryption {
     enabled = true
