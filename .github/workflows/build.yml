@@ -5,10 +5,10 @@ on: [push, pull_request]
 jobs:
   build:
     name: lint
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: hashicorp/setup-terraform@v1
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e  # v2.8.0
+      - uses: hashicorp/setup-terraform@ed3a0531877aca392eb870f440d9ae7aba83a6bd  # v1.4.0
       - name: Checking formating of all files
         run: |
           terraform fmt -check -diff -recursive
